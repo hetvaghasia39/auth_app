@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <h2>Edit profile</h2>
+    <form action="" method="put">
+      {% csrf_token %} {% for field in form %}
+      <div class="fieldWrapper">
+        {{ field.label_tag }} {{ field }}{{ field.errors }}
+      </div>
+      {% endfor %}
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

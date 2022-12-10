@@ -1,0 +1,34 @@
+<html>
+  <body>
+    <h2>user profile</h2>
+    <table>
+      {{user.profile_img}}
+      <tr>
+        <td>username</td>
+        <td>{{user.username}}</td>
+      </tr>
+      <tr>
+        <td>firstname</td>
+        <td>{{user.first_name}}</td>
+      </tr>
+      <tr>
+        <td>lastname</td>
+        <td>{{user.last_name}}</td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td>{{user.email}}</td>
+      </tr>
+      <tr>
+        <td>dob</td>
+        <td>{{user.dob}}</td>
+      </tr>
+      <tr>
+        <td>designation</td>
+        <td>{{user.designation}}</td>
+      </tr>
+    </table>
+    <a href="{% url "edit" user.pk %}">edit</a>
+    <a href="{% url "delete" user.pk %}">delete</a>
+  </body>
+</html>
